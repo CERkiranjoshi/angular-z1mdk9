@@ -1,0 +1,20 @@
+<form class="example-form">
+  <mat-label>Number</mat-label>
+  <textarea
+    type="text"
+    placeholder="Pick one"
+    aria-label="Number"
+    matInput
+    [formControl]="myControl"
+    [matAutocomplete]="auto"
+  ></textarea>
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{option}}
+    </mat-option>
+  </mat-autocomplete>
+</form>
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
